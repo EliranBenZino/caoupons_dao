@@ -1,0 +1,21 @@
+package dao;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import beans.Coupon;
+import beans.Customer;
+
+
+public interface CouponDao {
+
+	void addCoupon (Coupon coupon) throws SQLException;
+	void updateCoupon (Coupon c1
+			) throws SQLException;
+	void deleteCoupon (int couponID) throws SQLException;
+	ArrayList<Coupon> getAllCoupons() throws SQLException;
+	Coupon getOneCoupon(int id) throws SQLException;
+	void addCouponPurchase (int customerId, int couponID) throws SQLException;
+	void deleteCouponPurchase (int customerId, int couponID) throws SQLException;
+	
+}
