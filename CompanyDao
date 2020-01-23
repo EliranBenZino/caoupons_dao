@@ -1,0 +1,18 @@
+package dao;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import beans.Company;
+import exep.ExecptionCouponExists;
+
+public interface CompanyDao  {
+
+	boolean companyExists(String email,String password) throws SQLException;
+	void addCompany(Company company) throws SQLException, ExecptionCouponExists;
+	void updateCompany(Company company, int companyID)throws SQLException;
+	void deleteCompany(int id) throws SQLException;
+	ArrayList<Company> getAllCompanies() throws SQLException;
+	Company getOneCompany(int id) throws SQLException;
+	
+}
